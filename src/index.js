@@ -11,13 +11,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function R() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/todo" element={<Todo />} />
-        <Route path="/coin" element={<CoinTracker />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:id" element={<Detail />} />
+        <Route path={"/"} element={<App />} />
+        <Route path={"/todo"} element={<Todo />} />
+        <Route path={"/coin"} element={<CoinTracker />} />
+        <Route path={"/movies"} element={<Movies />} />
+        <Route path={"/movies/:id"} element={<Detail />} />
       </Routes>
     </Router>
   );
